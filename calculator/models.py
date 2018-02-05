@@ -15,7 +15,9 @@ class InsuranceCalculator(models.Model):
 
     def save(self, *args, **kwargs):
         if self.type == 'compressive':
+
             self.insurance_price = 1000
+
         elif self.type == 'third':
             self.insurance_price = 3000
         super(InsuranceCalculator, self).save(*args, **kwargs)
